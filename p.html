@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Love Proposal 💖</title>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+.page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 20px;
+    animation: fadeIn 2s ease;
+}
+
+/* Glow animation */
+h1 {
+    font-size: 3em;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff4d6d; }
+    to { text-shadow: 0 0 25px #ff99ac, 0 0 35px #ff4d6d; }
+}
+
+p {
+    font-size: 1.3em;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Buttons */
+.btn {
+    margin: 15px;
+    padding: 12px 25px;
+    border: none;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.yes {
+    background: #ff4d6d;
+    color: white;
+}
+
+.yes:hover {
+    background: #ff1e4d;
+}
+
+/* Running NO button */
+.no {
+    background: gray;
+    color: white;
+    position: absolute;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Page 1 -->
+<div class="page" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
+    <div class="overlay">
+        <h1>The Beginning ❤️</h1>
+        <p>You came into my life like a silent sunrise… and changed everything.</p>
+        <a href="#page2"><button class="btn yes">Next ➜</button></a>
+    </div>
+</div>
+
+<!-- Page 2 -->
+<div id="page2" class="page" style="background-image:url('httpsWhatsApp Image 2026-03-23 at 21.04.34 - Copy://images.unsplash.com/photo-1492724441997-5dc865305da7');">
+    <div class="overlay">
+        <h1>The Realization ✨</h1>
+        <p>I smile for no reason… and that reason is YOU.</p>
+        <a href="#page3"><button class="btn yes">Next ➜</button></a>
+    </div>
+</div>
+
+<!-- Page 3 -->
+<div id="page3" class="page" style="background-image:url('https://imagesWhatsApp Image 2026-03-23 at 21.04.34 (1).unsplash.com/photo-1517841905240-472988babdf9');">
+    <div class="overlay">
+        <h1>The Confession 💖</h1>
+        <p>I tried to hide it… but I’m deeply in love with you.</p>
+        <a href="#page4"><button class="btn yes">Next ➜</button></a>
+    </div>
+</div>
+
+<!-- Page 4 -->
+<div id="page4" class="page" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');">
+    <div class="overlay">
+        <h1>The Promise 🤍</h1>
+        <p>I will stand with you… in every moment of life.</p>
+        <a href="#page5"><button class="btn yes">Next ➜</button></a>
+    </div>
+</div>
+
+<!-- Final Page -->
+<div id="page5" class="page" style="background-image:url('https://images.unsplash.com/photo-1529336953121-adb2b1b5a6c4');">
+    <div class="overlay">
+        <h1>Will You Be Mine? 💍</h1>
+        <p>Say yes… and make my world complete ❤️</p>
+
+        <button class="btn yes" onclick="alert('She said YES ❤️🥳')">YES 💖</button>
+        <button class="btn no" id="noBtn">NO 😢</button>
+    </div>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+});
+</script>
+
+</body>
+</html>
